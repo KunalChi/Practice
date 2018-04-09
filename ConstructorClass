@@ -1,0 +1,73 @@
+
+/*
+*What Is Constructor In Java software development?
+*Constructor Is a code block which Is Called and executed at the time of object creation and constructs the values (i.e. data) for 
+*object and that's why It Is known as constructor. Each class have default no argument constructor In Java software development 
+*language If you have not specified any explicit constructor for that class. In java software development language, Constructor 
+*looks like methods but bellow given properties of constructor are differentiate them from the methods. 
+*
+*
+*Constructor Creation Rules
+*Name of the constructor must be same as class name in java software development language. Means If your class name Is Student 
+*then constructor name must be Student.
+*
+*Constructor must have not any return types.
+*
+* What is Constructor Overloading?
+*Constructor overloading Is useful when you wants to construct your object In different way or we can say using different number 
+*of parameters.Some basic rules of constructor overloading: 
+*Two constructors with same arguments are not allowed for constructor overloading.
+*You need to use this() keyword to call overloaded constructor.
+*If you are calling constructor from overloaded constructor using this() keyword, It must be first statement.
+*It is best practice to call constructor from overloaded constructor to make It easy to maintain.
+*
+*/
+
+public class Student {
+ String finame;//Instance variable
+ String miname;//Instance Variable 
+ public static void main(String[] args) {
+  Student stdn1 = new Student("Jim");
+  Student stdn2 = new Student("Mary", "Elizabeth");
+ }
+ 
+ //Constructor with one argument.
+ public Student(String fname){ 
+  finame = fname;//Local Variable  
+  System.out.println("1. First Name Is "+finame);
+ }
+ 
+ //Overloaded Constructor with two arguments.
+ public Student(String fname, String mname){
+  finame = fname;
+  miname = mname;
+  System.out.println("2. First Name Is "+finame);
+  System.out.println("2. Middle Name Is "+miname);  
+ } 
+}
+
+public class Student {
+ String finame;
+ String miname; 
+ public static void main(String[] args) {
+  Student stdn2 = new Student("Mary", "Elizabeth");
+ }
+ 
+ 
+ //We can do same thing using single object creation too using this() keyword as bellow.
+ 
+ //Constructor with one argument.
+ public Student(String fname){ 
+  finame = fname;  
+  System.out.println("1. First Name Is "+finame);
+ }
+ 
+ //Overloaded Constructor with two arguments.
+ public Student(String fname, String mname){
+  this("Jim"); //1st constructor Is called using this keyword.
+  finame = fname;
+  miname = mname;
+  System.out.println("2. First Name Is "+finame);
+  System.out.println("2. Middle Name Is "+miname);  
+ } 
+}
