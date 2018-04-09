@@ -1,0 +1,37 @@
+/*
+How To Handle SSL Certificate Error In FF For Selenium WebDriver
+Sometimes, When you access site manually In browser It will works fine but shows "This Connection is Untrusted" error when 
+you access same URL through webdriver. So what Is the reason behind this Issue? It Is working fine In default system browser 
+because you already Imported required certificate In that browser. That error will not appear once you Import required 
+certificate In browser. But as you know, Selenium webdriver opens fresh profile every time you run test so that browser 
+do not have required SSL certificate.
+
+So how to handle this SSL certificate error In webdriver? If you know, We can create Firefox profile manually and then we 
+can use It In webdriver test. Steps to resolve SSL certificate Issue are as bellow.
+
+Step 1 : Create new firefox profile with name = "certificateIssue". VIEW STEPS to create firefox profile.
+Step 2 : Start browser using that "certificateIssue" profile manually.
+Step 3 : Access the URL In which you are getting SSL certificate error. It will show you "This Connection is Untrusted" error.
+Step 4 : Import certificate by clicking on I Understnad the Risks -> Add Exception button. So error will disappear and URL 
+will be opened In new profile browser.
+Step 5 : Create webdriver script and access new created "certificateIssue" profile In firefox driver as bellow.
+package Testing_Pack;
+*/
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+
+public class sslError {
+ 
+ public static void main(String[] args) {
+  //Access firefox browser profile "certificateIssue" to use It In test.
+   ProfilesIni firProfiles = new ProfilesIni();
+   FirefoxProfile wbdrverprofile = firProfiles.getProfile("certificateIssue"); 
+   wbdrverprofile.setAcceptUntrustedCertificates(true); 
+   wbdrverprofile.setAssumeUntrustedCertificateIssuer(false);
+   WebDriver Driver = new FirefoxDriver(wbdrverprofile); 
+   Driver.get("site URL where certificate error");
+  }
+}
