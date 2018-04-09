@@ -1,0 +1,34 @@
+/*
+Selenium provides us with an interface called Alert. It is present in the org.openqa.selenium.Alert package. 
+Alert interface gives us following methods to deal with the alert:
+
+accept() To accept the alert
+dismiss() To dismiss the alert
+getText() To get the text of the alert
+sendKeys() To write some text to the alert
+Lets use these to handle the above mentioned types of alerts one by one.
+*/
+
+/*
+Simple alert
+Simple alerts just have a OK button on them. They are mainly used to display some information to the user. The first 
+alert on our test page is a simple alert. Following code will read the text from the Alert and then accept the alert. 
+Important point to note is that we can switch from main window to an alert using the driver.switchTo().alert(). Below 
+is the usage of that also
+*/
+
+	public static void main(String[] args) {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://toolsqa.wpengine.com/handling-alerts-using-selenium-webdriver/");
+		driver.manage().window().maximize();
+		// This step will result in an alert on screen
+		driver.findElement(By.xpath("//*[@id='content']/p[4]/button")).click();
+
+		Alert simpleAlert = driver.switchTo().alert();
+		String alertText = simpleAlert.getText();
+		System.out.println("Alert text is " + alertText);
+		simpleAlert.accept();
+    }
+   
+
+
