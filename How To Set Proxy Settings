@@ -1,0 +1,57 @@
+?*
+Sometimes, You need to set proxy settings of browser to run your selenium webdriver test. 
+As you know, selenium launch fresh browser every time you run test so default proxy setting will be No Proxy. 
+You can set It In two ways. 
+1. Creating firefox profile and then use that profile In selenium test. 
+2. Using DesiredCapabilities. We will use DesiredCapabilities of selenium to set proxy.
+
+What is DesiredCapabilities?
+Using DesiredCapabilities, we can set and configure webdriver browser driver Instance settings before 
+launching It. Simplest example Is -> I wants to set proxy settings for my webdriver browser Instance. 
+I can do It using DesiredCapabilities.
+
+How to set proxy settings of browser using DesiredCapabilities
+I have created simple example to set proxy settings for firefox browser. It will set firefox driver browser 
+Instance proxy settings as bellow.
+
+HTTP Proxy = localhost, Port = 8080
+SSL Proxy = localhost, Port = 8080
+FTP Proxy = localhost, Port = 8080
+SOCKS Host = localhost, Port = 8080
+*/
+
+ackage Testing_Pack;
+
+import java.io.IOException;
+import org.openqa.selenium.Proxy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class ProxySettings {
+
+ WebDriver driver;
+
+ @BeforeTest
+ public void setUpDriver() {
+  //Set proxy IP and port. Here localhost Is proxy IP and 8080 Is Port number.
+  //You can change both values as per your requirement.
+  String PROXY = "localhost:8080";
+  //Bellow given syntaxes will set browser proxy settings using DesiredCapabilities.
+  Proxy proxy = new Proxy();
+  proxy.setHttpProxy(PROXY).setFtpProxy(PROXY).setSslProxy(PROXY)
+    .setSocksProxy(PROXY);
+  DesiredCapabilities cap = new DesiredCapabilities();
+  cap.setCapability(CapabilityType.PROXY, proxy);
+  //Use Capabilities when launch browser driver Instance.
+  driver = new FirefoxDriver(cap);
+ }
+
+ @Test
+ public void start() throws IOException {
+  System.out.println("Check your webdriver driver Instance's proxy setttings.");
+ }
+}
