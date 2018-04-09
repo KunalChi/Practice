@@ -18,3 +18,12 @@ public class datatypes {
   System.out.println("boolean Var str Is --> "+str);
  }
 }
+
+
+/* Integer Var Is --> 4523
+   Long Var Is --> 652345
+   double Var d1 Is --> 56.2354
+   double Var d2 Is --> 12456.0
+   char Var c Is --> d
+   boolean Var b Is --> true
+   String Var str Is --> Hello World */
