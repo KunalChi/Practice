@@ -37,12 +37,15 @@ public class IfStatements {
  }
 }
 
+/*
 Bellow given output will be printed in your eclipse console when you will run above example. 
-***Simple If Statement Example***
-Value Of i(25) Is Smaller Than Value Of j(50).
-
-***If Else Statement Example***
-Value Of i(25) Is Smaller Than Value Of j(50).
-
-***Nested If Else Statement Part***
-Value Of k(24) Is Less Than Value Of i(25)
+* 
+*Simple If Statement Example
+*Value Of i(25) Is Smaller Than Value Of j(50).
+* 
+*If Else Statement Example
+*Value Of i(25) Is Smaller Than Value Of j(50).
+* 
+*Nested If Else Statement Part
+*Value Of k(24) Is Less Than Value Of i(25) 
+*/
