@@ -1,2 +1,0 @@
-# Practice
-Selenium java prac
