@@ -1,0 +1,32 @@
+Variable Types In Java - WebDriver Tutorials With Java:
+
+Before learning about variable types In java software programming language, I recommend you to read my posts related to variable's  
+DATA TYPES, ACCESS MODIFIERS and STATIC AND NON STATIC VARIABLES. As you know, Variable provide us a memory space (based on type and 
+size of declared variable) to store a value. There are different three types of variables available In java software development 
+language as bellow.
+
+1. Local Variables
+Variables which are declared Inside methods or constructor are called as local variables for that method or constructor in java 
+software programming language. Variables declared Inside method or constructor are limited for that method or constructor only. 
+You can not access to It outside that method or constructor.You can not use access modifiers with local variables because they are 
+limited to that method or constructor block only In java software development language.Need to initialize the value of local 
+variables before using It because there Is not any default value assigned to local variables.
+
+2. Instance Variables (Non Static)
+Instance variables are declared on class level which is parallel to methods or constructors (outside the method or constructor block).
+Instance variables are generally used with objects. So they are created and destroyed with object creation and destruction In 
+java software development language. Instance(non static) variables are accessible directly by all the non static methods and 
+constructors of that class.If you wants to access Instance(non static) variables Inside static method, You needs to create object of 
+that class.Instance variables are always Initialized with Its default values based on Its data types. You can access Instance variable 
+directly (by Its name) Inside same class. If you wants to access It outside the class then you have to provide object reference with 
+variable name. Vast usage of Instance variables in java software programs and selenium webdriver software automation tests.
+
+3. Class Variables (Static)
+Same as Instance variables, Class variables are declared on class level (outside the method or constructor block). Only difference Is 
+class variables are declared using static keyword. Class variables are used In rare case like when It Is predefined that value of 
+variable will never change. In that case we can use class variables. Class variables are created on program start and destroyed on 
+program end. Class variables are visible to all methods and constructors of class. Class variables are visible to other class based 
+on Its access modifiers. Generally they are public. We can access class variables directly using Its name Inside same class. If you 
+wants to access It outside the class then you need to use class name with variable. Bellow given example will give you some Idea 
+about all three types of variables. Created two class to show you how to access class variable inside other class. Both these class 
+will show you the access levels of all three types of variables.
