@@ -1,4 +1,4 @@
-?*
+/*
 Sometimes, You need to set proxy settings of browser to run your selenium webdriver test. 
 As you know, selenium launch fresh browser every time you run test so default proxy setting will be No Proxy. 
 You can set It In two ways. 
