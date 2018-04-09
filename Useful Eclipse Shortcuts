@@ -1,0 +1,35 @@
+Useful Eclipse Shortcuts For WebDriver Automation
+Ctrl + F4	Close current selected file.
+Ctrl + Shift + F4	Close all open files.
+Ctrl + Numpad_Subtract	Collapse.
+Ctrl + Numpad_Add	Expand.
+Ctrl + Shift + Numpad_Divide	Collapse All.
+Ctrl + Shift + Numpad_Multiply	Expand All.
+Ctrl + S	Save Current Selected File.
+Ctrl + Shift + S	Save All Files.
+Ctrl + Page Down/Ctrl + Page Up	Switch to Next/Previous Editor.
+Home/End	Set cursor at line Start/End.
+Ctrl + Home/End	Set cursor at Text Start/End.
+Ctrl + L	Go To Line.
+F3	Jump to variable declaration of selected class, method, or parameter.
+Ctrl + Space	Content assist based on my typing.
+Ctrl + 1	Open quick fix assist.
+Ctrl + 3	Open quick assist.
+Ctrl + Shift + /	Comment selected source code block.
+Ctrl + Alt + H	Open call Hierarchy.
+Ctrl + Alt + F	Format selected source code
+Ctrl + Shift + O	Organize imports in the current java file.
+Ctrl + Shift + R	Search for resources
+Ctrl + Shift + T	Search for types
+Ctrl + F8	Change/Switch perspective.
+Ctrl + .	Go to next problem
+Ctrl + ,	Go to previous problem
+F4	Show type hierarchy of the variable
+Alt + Shift + R	Rename of package, class name
+Alt + Shift + D, N	Debug TestNG test
+Alt + Shift + X, N	Run TestNG test
+F11	Debug
+F5	Step Into function
+F6	Next step (line by line)
+F7	Step out
+F8	Skip to next Breakpoint
